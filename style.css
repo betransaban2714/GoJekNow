@@ -1,0 +1,97 @@
+#logo {
+    font-family: 'Arial', sans-serif; /* Ganti dengan font yang Anda inginkan */
+    font-size: 48px; /* Ukuran teks */
+    color: #42A5F5; /* Warna teks */
+    text-transform: none; /* Menggunakan teks sesuai input tanpa mengubahnya menjadi huruf kapital */
+    letter-spacing: 4px; /* Jarak antar huruf */
+    text-shadow: 2px 2px 4px #1E253E; /* Efek bayangan teks */
+    overflow: hidden; /* Menghilangkan huruf yang berlebihan */
+    white-space: nowrap; /* Menyusun teks menjadi satu baris */
+}
+
+/* Animasi untuk muncul satu huruf setiap 0.2 detik */
+@keyframes appear {
+    0% {
+        width: 0; /* Tidak ada teks yang terlihat */
+    }
+    100% {
+        width: 100%; /* Semua huruf terlihat */
+    }
+}
+
+/* Menggunakan animasi appear selama 4 detik dan hanya sekali */
+#logo {
+    animation: appear 4s steps(10) 1;
+}
+
+/* CSS untuk slider gambar yang dapat digeser */
+#imageSlider {
+    margin-top: 20px;
+}
+
+.carousel-inner img {
+    width: 100%;
+    height: 300px; /* Sesuaikan tinggi gambar sesuai kebutuhan Anda */
+}
+
+.carousel-control-prev,
+.carousel-control-next {
+    background-color: transparent;
+    width: auto;
+    font-size: 24px;
+}
+
+.carousel-control-prev-icon,
+.carousel-control-next-icon {
+    background-color: #1E253E; /* Warna latar belakang panah slider */
+    color: #FFFFFF; /* Warna panah slider */
+}
+
+/* CSS untuk mengubah warna titik navigasi menjadi hitam */
+.carousel-indicators li {
+    background-color: #000;
+}
+
+/* CSS untuk mengubah warna titik navigasi saat aktif menjadi hitam */
+.carousel-indicators .active {
+    background-color: #000;
+}
+
+/* Gaya tambahan untuk elemen-elemen lain di halaman Anda */
+body {
+    background-color: #1E253E; /* Warna biru gelap */
+    font-family: Arial, sans-serif;
+    text-align: center;
+}
+
+form {
+    max-width: 400px;
+    margin: 0 auto;
+}
+
+input[type="text"] {
+    width: 100%;
+    padding: 15px; /* Ukuran input teks lebih besar */
+    margin-bottom: 10px;
+    border: 1px solid #42A5F5;
+    background-color: #394963;
+    color: #FFFFFF;
+}
+
+input[type="submit"] {
+    background-color: #42A5F5;
+    color: #FFFFFF;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+}
+
+input[type="submit"]:hover {
+    background-color: #1976D2;
+}
+
+label {
+    display: block;
+    margin-top: 10px;
+    color: #42A5F5;
+}
