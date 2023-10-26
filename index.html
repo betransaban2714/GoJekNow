@@ -75,10 +75,11 @@
             const alamat = document.getElementById("alamat").value;
             const tujuan = document.getElementById("tujuan").value;
             const nomorWhatsApp = "+6281248849394"; // Ganti dengan nomor WhatsApp ojek Anda
-            const pesan = `Rincian Pemesanan: <br>
-            Nama: ${nama} <br>
-            Alamat: ${alamat} <br>
-            Tujuan: ${tujuan}`;
+            const pesan =
+            `Rincian Pemesanan:
+            Nama: ${nama}
+            Poskar: ${alamat}
+            Otw ke: ${tujuan}`;
             const linkWhatsApp = `https://wa.me/${nomorWhatsApp}?text=${encodeURIComponent(pesan)}`;
             window.location.href = linkWhatsApp;
 
