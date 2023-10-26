@@ -1,3 +1,10 @@
+/* Gaya tambahan untuk elemen-elemen lain di halaman Anda */
+body {
+    background-color: #1E253E; /* Warna biru gelap */
+    font-family: Arial, sans-serif;
+    text-align: center;
+}
+
 #logo {
     font-family: 'Arial', sans-serif; /* Ganti dengan font yang Anda inginkan */
     font-size: 48px; /* Ukuran teks */
@@ -55,13 +62,6 @@
 /* CSS untuk mengubah warna titik navigasi saat aktif menjadi hitam */
 .carousel-indicators .active {
     background-color: #000;
-}
-
-/* Gaya tambahan untuk elemen-elemen lain di halaman Anda */
-body {
-    background-color: #1E253E; /* Warna biru gelap */
-    font-family: Arial, sans-serif;
-    text-align: center;
 }
 
 form {
