@@ -8,7 +8,7 @@
 </head>
 <body>
     <!-- Carousel untuk gambar yang dapat digeser -->
-    <div id="imageSlider" class="carousel slide" data-ride="carousel" data-wrap="false">
+    <div id="imageSlider" class="carousel slide" data-ride="carousel">
         <ol class="carousel-indicators">
             <li data-target="#imageSlider" data-slide-to="0" class="active"></li>
             <li data-target="#imageSlider" data-slide-to="1"></li>
@@ -30,7 +30,7 @@
             <span class="sr-only">Previous</span>
         </a>
         <a class="carousel-control-next" href="#imageSlider" role="button" data-slide="next">
-            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="carousel-control-next-icon" ariahidden="true"></span>
             <span class="sr-only">Next</span>
         </a>
     </div>
@@ -57,17 +57,9 @@
     <script>
         // Inisialisasi carousel
         var imageSlider = document.getElementById("imageSlider");
-        var myCarousel = new bootstrap.Carousel(imageSlider);
-
-        // Fungsi untuk menggeser ke slide sebelumnya
-        function slidePrev() {
-            myCarousel.prev();
-        }
-
-        // Fungsi untuk menggeser ke slide berikutnya
-        function slideNext() {
-            myCarousel.next();
-        }
+        var myCarousel = new bootstrap.Carousel(imageSlider, {
+            interval: 3000 // Atur interval menjadi 3 detik
+        });
 
         function generateWhatsAppLink(event) {
             event.preventDefault(); // Mencegah pengiriman form
@@ -76,10 +68,7 @@
             const tujuan = document.getElementById("tujuan").value;
             const nomorWhatsApp = "+6282196913604"; // Ganti dengan nomor WhatsApp ojek Anda
             const pesan =
-`*Rincian Pemesanan:*
-*Nama:* ${nama}
-*Poskar:* ${alamat}
-*Otw ke:* ${tujuan}`;
+                `*Rincian Pemesanan:*\n*Nama:* ${nama}\n*Poskar:* ${alamat}\n*Otw ke:* ${tujuan}`;
             const linkWhatsApp = `https://wa.me/${nomorWhatsApp}?text=${encodeURIComponent(pesan)}`;
             window.location.href = linkWhatsApp;
 
